@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nexo ADS — Agencia de publicidad creativa. Conectamos tu marca con el mundo a través de estrategias digitales de alto impacto." />
+    <title>Nexo ADS — Agencia Publicitaria</title>
+    <link rel="stylesheet" href="Style/style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>" />
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="loader-logo">NEXO<span>.</span>ADS</div>
+    <div class="loader-bar"></div>
+    <div class="loader-pct">0%</div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#servicios">Servicios</a>
+    <a href="#trabajo">Trabajo</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#testimonios">Clientes</a>
+    <a href="#contacto">Contacto</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+    <a href="#" class="nav-logo">NEXO<span>.</span>ADS</a>
+    <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#testimonios">Clientes</a></li>
+        <li><a href="#contacto" class="nav-cta">Hablemos</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-content">
+        <p class="hero-eyebrow">Agencia Creativa · Publicidad Digital</p>
+        <h1 class="hero-title">
+            <span class="line"><span class="line-inner">CONECTAMOS</span></span>
+            <span class="line"><span class="line-inner">TU MARCA</span></span>
+            <span class="line"><span class="line-inner orange">AL MUNDO.</span></span>
+        </h1>
+        <p class="hero-sub">Creamos campañas que no solo se ven — se sienten. Estrategia, creatividad y resultados que transforman tu negocio.</p>
+        <div class="hero-buttons">
+            <a href="#trabajo" class="btn-primary">Ver nuestro trabajo</a>
+            <a href="#contacto" class="btn-outline">Hablar con un experto</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+    <div class="stat-item reveal">
+        <span class="stat-number" data-target="180" data-suffix="+">0+</span>
+        <span class="stat-label">Marcas impactadas</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+        <span class="stat-number" data-target="340" data-suffix="M">0M</span>
+        <span class="stat-label">Impresiones generadas</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+        <span class="stat-number" data-target="12" data-suffix=" años">0 años</span>
+        <span class="stat-label">En el mercado</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+        <span class="stat-number" data-target="97" data-suffix="%">0%</span>
+        <span class="stat-label">Clientes satisfechos</span>
+    </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+    <div class="services-header">
+        <div class="reveal">
+            <p class="section-eyebrow">Lo que hacemos</p>
+            <h2 class="section-title">NUESTROS<br>SERVICIOS</h2>
+        </div>
+        <div class="reveal reveal-delay-1">
+            <p class="section-desc">Desde la estrategia hasta la ejecución, cubrimos cada ángulo de tu presencia en el mundo digital y físico.</p>
+        </div>
+    </div>
+    <div class="services-grid">
+        <div class="service-card reveal">
+            <span class="service-num">01</span>
+            <span class="service-icon">📢</span>
+            <h3>PUBLICIDAD DIGITAL</h3>
+            <p>Campañas de alto rendimiento en Meta, Google, TikTok y más. Maximizamos tu inversión con datos y creatividad.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+            <span class="service-num">02</span>
+            <span class="service-icon">🎨</span>
+            <h3>BRANDING Y DISEÑO</h3>
+            <p>Identidades visuales que hablan por tu marca. Creamos sistemas de diseño coherentes y memorables.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+            <span class="service-num">03</span>
+            <span class="service-icon">🎬</span>
+            <h3>PRODUCCIÓN CREATIVA</h3>
+            <p>Contenido audiovisual que cautiva. Videos, spots, reels y piezas gráficas que detienen el scroll.</p>
+        </div>
+        <div class="service-card reveal">
+            <span class="service-num">04</span>
+            <span class="service-icon">📊</span>
+            <h3>ESTRATEGIA & DATA</h3>
+            <p>Decisiones basadas en datos reales. Analizamos, medimos y optimizamos cada aspecto de tu comunicación.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+            <span class="service-num">05</span>
+            <span class="service-icon">🌐</span>
+            <h3>SOCIAL MEDIA</h3>
+            <p>Gestionamos tu presencia digital con contenido relevante, comunidades activas y crecimiento sostenido.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+            <span class="service-num">06</span>
+            <span class="service-icon">🚀</span>
+            <h3>SEO & PERFORMANCE</h3>
+            <p>Posicionamiento orgánico y campañas de performance que generan conversiones reales y escalables.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TRABAJO -->
+<section id="trabajo">
+    <div class="work-header reveal">
+        <div>
+            <p class="section-eyebrow">Casos de éxito</p>
+            <h2 class="section-title">NUESTRO<br>TRABAJO</h2>
+        </div>
+        <a href="#contacto" class="btn-outline">Ver todos los proyectos</a>
+    </div>
+    <div class="work-grid">
+        <div class="work-item reveal">
+            <div class="work-bg work-grad-1">
+                <span class="work-label">VERTIX</span>
+            </div>
+            <div class="work-overlay">
+                <span class="work-cat">Campaña Digital · Branding</span>
+                <span class="work-title">Vertix — Rediseño de Marca</span>
+            </div>
+            <div class="work-arrow">↗</div>
+        </div>
+        <div class="work-item reveal reveal-delay-1">
+            <div class="work-bg work-grad-2">
+                <span class="work-label">SOLARA</span>
+            </div>
+            <div class="work-overlay">
+                <span class="work-cat">Social Media · Video</span>
+                <span class="work-title">Solara — Lanzamiento</span>
+            </div>
+            <div class="work-arrow">↗</div>
+        </div>
+        <div class="work-item reveal">
+            <div class="work-bg work-grad-3">
+                <span class="work-label">NOVATEK</span>
+            </div>
+            <div class="work-overlay">
+                <span class="work-cat">Performance · SEO</span>
+                <span class="work-title">Novatek — Ads Masivos</span>
+            </div>
+            <div class="work-arrow">↗</div>
+        </div>
+        <div class="work-item reveal reveal-delay-1">
+            <div class="work-bg work-grad-4" style="background: linear-gradient(135deg, #1a0800 0%, #3a1500 50%, #ff5e0010 100%);">
+                <span class="work-label">FULCRO</span>
+            </div>
+            <div class="work-overlay">
+                <span class="work-cat">Branding · Estrategia</span>
+                <span class="work-title">Fulcro — Identidad Completa</span>
+            </div>
+            <div class="work-arrow">↗</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
+    <div class="process-header reveal">
+        <p class="section-eyebrow">Cómo trabajamos</p>
+        <h2 class="section-title">NUESTRO PROCESO</h2>
+        <p class="section-desc">Un método probado que convierte ideas en resultados medibles, paso a paso.</p>
+    </div>
+    <div class="process-steps">
+        <div class="process-step reveal">
+            <div class="step-dot"><span class="step-emoji">🔍</span></div>
+            <h3>DIAGNÓSTICO</h3>
+            <p>Analizamos tu marca, competencia y audiencia para entender exactamente dónde estás y a dónde quieres llegar.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+            <div class="step-dot"><span class="step-emoji">💡</span></div>
+            <h3>ESTRATEGIA</h3>
+            <p>Diseñamos un plan de comunicación personalizado, con objetivos claros, canales definidos y métricas reales.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+            <div class="step-dot"><span class="step-emoji">⚡</span></div>
+            <h3>EJECUCIÓN</h3>
+            <p>Producimos y lanzamos campañas de alto impacto con creatividad sin límites y tecnología de punta.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+            <div class="step-dot"><span class="step-emoji">📈</span></div>
+            <h3>RESULTADOS</h3>
+            <p>Medimos, optimizamos y escalaamos. Reportes transparentes para que veas cada peso invertido trabajando.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+    <div class="testimonios-header reveal">
+        <p class="section-eyebrow">Lo que dicen</p>
+        <h2 class="section-title">NUESTROS CLIENTES</h2>
+    </div>
+    <div class="testimonios-slider">
+        <div class="testimonio-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testimonio-text">"Nexo ADS transformó por completo nuestra presencia digital. En 3 meses triplicamos nuestras ventas online. Son más que una agencia, son socios estratégicos."</p>
+            <div class="testimonio-author">
+                <div class="author-avatar">CM</div>
+                <div>
+                    <div class="author-name">Carlos Mendoza</div>
+                    <div class="author-role">CEO · Vertix Group</div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonio-card reveal reveal-delay-1">
+            <div class="stars">★★★★★</div>
+            <p class="testimonio-text">"El equipo de Nexo entiende la creatividad como nadie. Nuestra campaña de lanzamiento superó todas las expectativas. ROI del 380% en el primer trimestre."</p>
+            <div class="testimonio-author">
+                <div class="author-avatar">AL</div>
+                <div>
+                    <div class="author-name">Andrea López</div>
+                    <div class="author-role">Directora de Mktg · Solara</div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonio-card reveal reveal-delay-2">
+            <div class="stars">★★★★★</div>
+            <p class="testimonio-text">"Profesionalismo, creatividad y resultados medibles. Nexo ADS redefinió nuestra identidad de marca y nos posicionó como líderes en el sector."</p>
+            <div class="testimonio-author">
+                <div class="author-avatar">MR</div>
+                <div>
+                    <div class="author-name">Miguel Ramos</div>
+                    <div class="author-role">Fundador · Novatek</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta-band">
+    <div class="reveal">
+        <h2 class="cta-band-title">¿LISTO PARA<br>DESTACAR?</h2>
+        <p class="cta-band-sub">Tu marca merece una estrategia ganadora. Hablemos y construyamos algo extraordinario juntos.</p>
+        <a href="#contacto" class="btn-dark">Empezar ahora →</a>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+    <div class="contact-grid">
+        <div class="contact-info">
+            <div class="reveal">
+                <p class="section-eyebrow">Trabajemos juntos</p>
+                <h2 class="section-title">HABLEMOS<br>DE TU MARCA</h2>
+                <p class="section-desc">Cuéntanos tu proyecto. Respondemos en menos de 24 horas con una propuesta inicial sin costo.</p>
+            </div>
+            <div class="contact-items reveal reveal-delay-1">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <div class="contact-item-label">Oficinas</div>
+                        <div class="contact-item-value">Av. República, Quito, Ecuador</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <div class="contact-item-label">Email</div>
+                        <div class="contact-item-value">hola@nexoads.com</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <div class="contact-item-label">Teléfono</div>
+                        <div class="contact-item-value">+593 99 123 4567</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div>
+                        <div class="contact-item-label">Horario</div>
+                        <div class="contact-item-value">Lun — Vie, 9:00 — 18:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+            <form class="contact-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Tu empresa" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+593 99 000 0000" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="servicio">Servicio de interés</label>
+                    <select id="servicio" name="servicio">
+                        <option value="" disabled selected>Selecciona un servicio</option>
+                        <option value="digital">Publicidad Digital</option>
+                        <option value="branding">Branding y Diseño</option>
+                        <option value="produccion">Producción Creativa</option>
+                        <option value="social">Social Media</option>
+                        <option value="seo">SEO & Performance</option>
+                        <option value="estrategia">Estrategia Integral</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Cuéntanos tu proyecto</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente tu marca, objetivos y qué tipo de apoyo necesitas..."></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn-primary">Enviar mensaje</button>
+                    <span class="form-note">Respuesta garantizada en 24h</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div>
+            <a href="#" class="footer-logo">NEXO<span>.</span>ADS</a>
+            <p class="footer-desc">Conectamos marcas con personas. Estrategia, creatividad y tecnología al servicio de tu negocio.</p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+                <li><a href="#servicios">Publicidad Digital</a></li>
+                <li><a href="#servicios">Branding & Diseño</a></li>
+                <li><a href="#servicios">Producción Creativa</a></li>
+                <li><a href="#servicios">Social Media</a></li>
+                <li><a href="#servicios">SEO & Performance</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#proceso">Cómo trabajamos</a></li>
+                <li><a href="#trabajo">Portafolio</a></li>
+                <li><a href="#testimonios">Clientes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="mailto:hola@nexoads.com">hola@nexoads.com</a></li>
+                <li><a href="tel:+593991234567">+593 99 123 4567</a></li>
+                <li><a href="#">Quito, Ecuador</a></li>
+                <li><a href="#">WhatsApp</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-copy">© 2025 <span>Nexo ADS</span>. Todos los derechos reservados.</p>
+        <p class="footer-badge">BUILT WITH PASSION · QUITO · EC</p>
+    </div>
+</footer>
+
+<script src="Animation/Main.js"></script>
+</body>
+</html>
