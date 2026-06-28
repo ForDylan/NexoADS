@@ -186,7 +186,8 @@ const counterObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.5 });
 
-document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+// (Sección de stats removida — se reactiva más adelante cuando haya datos reales)
+// document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
 
 /* === SMOOTH SCROLL === */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -200,25 +201,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/* === FORM SUBMIT === */
+/* === FORM SUBMIT -> WHATSAPP === */
+// ⚠️ Reemplaza este número por el de tu agencia (código de país + número, sin + ni espacios)
+const WHATSAPP_NUMBER = '593servi978962943';
+
 const form = document.querySelector('.contact-form');
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const nombre = form.querySelector('#nombre')?.value.trim() || 'No especificado';
+    const empresa = form.querySelector('#empresa')?.value.trim() || 'No especificado';
+    const email = form.querySelector('#email')?.value.trim() || 'No especificado';
+    const telefono = form.querySelector('#telefono')?.value.trim() || 'No especificado';
+    const servicioSelect = form.querySelector('#servicio');
+    const servicio = servicioSelect?.options[servicioSelect.selectedIndex]?.text || 'No especificado';
+    const mensaje = form.querySelector('#mensaje')?.value.trim() || 'Sin mensaje adicional';
+
+    // Validación básica antes de redirigir
+    const nombreInput = form.querySelector('#nombre');
+    const emailInput = form.querySelector('#email');
+    if (!nombreInput.value.trim() || !emailInput.value.trim()) {
+        showToast('Por favor completa nombre y email 📝');
+        if (!nombreInput.value.trim()) nombreInput.focus();
+        else emailInput.focus();
+        return;
+    }
+
+    const texto =
+        `¡Hola Nexo ADS! 👋 Quiero más información.
+
+*Nombre:* ${nombre}
+*Empresa:* ${empresa}
+*Email:* ${email}
+*Teléfono:* ${telefono}
+*Servicio de interés:* ${servicio}
+
+*Mensaje:*
+${mensaje}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`;
+
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.textContent;
-    btn.textContent = 'Enviando...';
+    btn.textContent = 'Abriendo WhatsApp...';
     btn.disabled = true;
+
     setTimeout(() => {
-        btn.textContent = '✓ Enviado';
-        btn.style.background = '#22c55e';
-        showToast('¡Mensaje enviado! Te contactamos pronto. 🚀');
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.style.background = '';
-            btn.disabled = false;
-            form.reset();
-        }, 3000);
-    }, 1600);
+        window.open(url, '_blank');
+        showToast('¡Listo! Continúa en WhatsApp 🚀');
+        btn.textContent = originalText;
+        btn.disabled = false;
+        form.reset();
+    }, 500);
 });
 
 function showToast(msg) {
